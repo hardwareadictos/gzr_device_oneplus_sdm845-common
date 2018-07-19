@@ -111,7 +111,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras
 
 # Pocket mode
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     OnePlusPocketMode
 
 # Power
