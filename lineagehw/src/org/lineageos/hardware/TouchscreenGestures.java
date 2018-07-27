@@ -61,9 +61,9 @@ public class TouchscreenGestures {
     // Id, name, keycode
     private static final TouchscreenGesture[] TOUCHSCREEN_GESTURES = {
         new TouchscreenGesture(0, "Two fingers down swipe", 251),
-        new TouchscreenGesture(1, "Up arrow", 252),
+        new TouchscreenGesture(1, "Up arrow", 255),
         new TouchscreenGesture(2, "Right arrow", 254),
-        new TouchscreenGesture(3, "Down arrow", 255),
+        new TouchscreenGesture(3, "Down arrow", 252),
         new TouchscreenGesture(4, "Left arrow", 253),
         new TouchscreenGesture(5, "One finger up swipe", 66),
         new TouchscreenGesture(6, "One finger right swipe", 65),
