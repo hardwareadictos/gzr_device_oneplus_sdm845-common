@@ -24,9 +24,9 @@
 
 #include "uevent_listener.h"
 
-#define KEY_MODE_NORMAL 601
-#define KEY_MODE_VIBRATION 602
-#define KEY_MODE_SILENCE 603
+#define MODE_RING 605
+#define MODE_VIBRATE 604
+#define MODE_TOTAL_SILENCE 600
 
 using android::Uevent;
 using android::UeventListener;
@@ -46,9 +46,9 @@ int main() {
     }
 
     err = ioctl(uinputFd, UI_SET_EVBIT, EV_KEY) |
-          ioctl(uinputFd, UI_SET_KEYBIT, KEY_MODE_NORMAL) |
-          ioctl(uinputFd, UI_SET_KEYBIT, KEY_MODE_VIBRATION) |
-          ioctl(uinputFd, UI_SET_KEYBIT, KEY_MODE_SILENCE);
+          ioctl(uinputFd, UI_SET_KEYBIT, MODE_RING) |
+          ioctl(uinputFd, UI_SET_KEYBIT, MODE_VIBRATE) |
+          ioctl(uinputFd, UI_SET_KEYBIT, MODE_TOTAL_SILENCE);
     if (err != 0) {
         LOG(ERROR) << "Unable to enable KEY events";
         goto out;
@@ -85,11 +85,11 @@ int main() {
 
         int keyCode;
         if (none && !vibration && !silent) {
-            keyCode = KEY_MODE_NORMAL;
+            keyCode = MODE_RING;
         } else if (!none && vibration && !silent) {
-            keyCode = KEY_MODE_VIBRATION;
+            keyCode = MODE_VIBRATE;
         } else if (!none && !vibration && silent) {
-            keyCode = KEY_MODE_SILENCE;
+            keyCode = MODE_TOTAL_SILENCE;
         } else {
             // Ignore intermediate states
             return;
