@@ -55,6 +55,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
 # Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.sdm845.recovery
+
 PRODUCT_PACKAGES_DEBUG += \
     android.hardware.boot@1.0-impl.recovery \
     bootctl
@@ -136,12 +140,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm845 \
-    libcutils \
-    libgptutils.oneplus_sdm845.recovery \
-    libz \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
