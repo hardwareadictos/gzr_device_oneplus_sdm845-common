@@ -27,3 +27,6 @@
 
 # Wi-Fi
 /system/etc/WCNSS_qcom_cfg.ini    u:object_r:vendor_configs_file:s0
+
+# Custom Healthd
+/system/bin/hw/android.hardware.health@2.0-service.oneplus6 u:object_r:hal_health_omni_exec:s0
