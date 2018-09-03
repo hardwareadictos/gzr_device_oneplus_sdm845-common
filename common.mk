@@ -138,4 +138,9 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libz \
 
 PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
+    update_engine_clien
+
+# Custom op6 healthd
+PRODUCT_PACKAGES += android.hardware.health@2.0-service.oneplus6
+DEVICE_FRAMEWORK_MANIFEST_FILE += \
+    system/libhidl/vintfdata/manifest_healthd_exclude.xml
