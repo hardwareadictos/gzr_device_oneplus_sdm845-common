@@ -142,3 +142,7 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# WFD
+PRODUCT_BOOT_JARS += \
+    WfdCommon
