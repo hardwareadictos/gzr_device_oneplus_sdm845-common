@@ -78,6 +78,9 @@ TARGET_USES_QTI_CAMERA2CLIENT := true
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
+# Enable DRM plugins 64 bit compilation
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Display
 TARGET_USES_HWC2 := true
 
