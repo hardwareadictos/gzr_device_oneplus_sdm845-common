@@ -123,6 +123,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Verified Boot
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
