@@ -50,6 +50,8 @@ on boot
 
     setprop vendor.camera.aux.packagelist com.oneplus.camera
 
+    mkdir /persist/battery 0770 system system
+
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 
