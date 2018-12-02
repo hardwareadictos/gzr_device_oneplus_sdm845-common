@@ -51,6 +51,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_effects.xml:system/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
 # Boot control
@@ -155,7 +156,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 #Wifi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/etc/WCNSS_qcom_cfg.ini:/vendor/etc/wifi/WCNSS_qcom_cfg.ini 
+    $(LOCAL_PATH)/prebuilts/etc/WCNSS_qcom_cfg.ini:/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 
 # WFD
 PRODUCT_BOOT_JARS += \
