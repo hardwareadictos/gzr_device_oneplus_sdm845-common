@@ -71,8 +71,8 @@ PRODUCT_PACKAGES += \
     libvulkan
 
 # Doze mode
-# PRODUCT_PACKAGES += \
-#   OneplusDoze    
+PRODUCT_PACKAGES += \
+    OnePlusDoze    
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
