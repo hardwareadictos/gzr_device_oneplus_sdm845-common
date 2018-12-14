@@ -65,7 +65,8 @@ PRODUCT_PACKAGES_DEBUG += \
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
-    init.recovery.qcom.rc
+    init.recovery.qcom.rc \
+    init.jamesdsp.sh
 
 # Display
 PRODUCT_PACKAGES += \

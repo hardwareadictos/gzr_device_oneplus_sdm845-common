@@ -33,5 +33,8 @@
 /system/bin/hw/android.hardware.health@2.0-service.oneplus6 u:object_r:hal_health_omni_exec:s0
 /sys/devices/platform/soc/1d84000\.ufshc/host0/target0:0:0/0:0:0:0/block/sda/stat u:object_r:sysfs_batteryinfo:s0
 
+# JamesDSP shell script
+/system/bin/init.jamesdsp.sh   u:object_r:jamesdsp_exec:s0
+
 # Custom Equilizer (JamesDSP)
 /system/lib/soundfx/libjamesdsp\.so    u:object_r:vendor_file:s0
