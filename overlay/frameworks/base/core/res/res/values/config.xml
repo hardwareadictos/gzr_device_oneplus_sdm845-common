@@ -385,5 +385,19 @@
 
     <!-- Enable dual LTE capability support-->
     <bool name="config_dual_LTE_capability">true</bool>
+
+    <!-- Whether navigation bar can be disabled (for devices with hardware keys) -->
+    <bool name="config_canDisableNavigationBar">true</bool>
+
+    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_smart_battery_available">true</bool>
+    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">4.0dip</dimen>
+
+    <!-- Internal default to navigation bar value -->
+    <bool name="config_defaultToNavigationBar">false</bool>
+
+    <!-- Enable system navigation keys. -->
+   <bool name="config_supportSystemNavigationKeys">true</bool>
     
 </resources>
