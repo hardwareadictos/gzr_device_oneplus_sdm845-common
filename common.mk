@@ -145,10 +145,9 @@ PRODUCT_PACKAGES += \
     RemovePackages
 
 # Telephony
-#PRODUCT_PACKAGES += \
-    telephony-ext
-
-#PRODUCT_BOOT_JARS += \
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
     telephony-ext
 
 # tri-state-key
