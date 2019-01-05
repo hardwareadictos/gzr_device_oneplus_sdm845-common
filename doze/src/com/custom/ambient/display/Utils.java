@@ -39,7 +39,6 @@ public final class Utils {
     protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
 
     protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
-    protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
 
     protected static void startService(Context context) {
@@ -55,7 +54,8 @@ public final class Utils {
     }
 
     protected static void checkDozeService(Context context) {
-        if (isDozeEnabled(context) && sensorsEnabled(context)) {
+        if (isDozeEnabled(context) &&
+                (isPickUpEnabled(context) || isPocketEnabled(context))) {
             startService(context);
         } else {
             stopService(context);
@@ -103,17 +103,22 @@ public final class Utils {
         return isGestureEnabled(context, GESTURE_PICK_UP_KEY);
     }
 
-    protected static boolean isHandwaveGestureEnabled(Context context) {
-        return isGestureEnabled(context, GESTURE_HAND_WAVE_KEY);
-    }
-
     protected static boolean isPocketGestureEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_POCKET_KEY);
     }
 
     protected static boolean sensorsEnabled(Context context) {
-        return isPickUpEnabled(context) || isHandwaveGestureEnabled(context)
-                || isPocketGestureEnabled(context);
+        return isPickUpEnabled(context) || isPocketGestureEnabled(context);
+    }
+
+    protected static void enablePocket(Context context, boolean enable) {
+        PreferenceManager.getDefaultSharedPreferences(context).edit()
+                .putBoolean(GESTURE_POCKET_KEY, enable).apply();
+    }
+
+    protected static boolean isPocketEnabled(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(GESTURE_POCKET_KEY, false);
     }
 
     protected static Sensor getSensor(SensorManager sm, String type) {
