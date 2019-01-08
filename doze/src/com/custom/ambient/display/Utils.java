@@ -54,8 +54,7 @@ public final class Utils {
     }
 
     protected static void checkDozeService(Context context) {
-        if (isDozeEnabled(context) &&
-                (isPickUpEnabled(context) || isPocketEnabled(context))) {
+        if (isDozeEnabled(context) && areGesturesEnabled(context)) {
             startService(context);
         } else {
             stopService(context);
@@ -103,22 +102,12 @@ public final class Utils {
         return isGestureEnabled(context, GESTURE_PICK_UP_KEY);
     }
 
-    protected static boolean isPocketGestureEnabled(Context context) {
+    protected static boolean isPocketEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_POCKET_KEY);
     }
 
-    protected static boolean sensorsEnabled(Context context) {
-        return isPickUpEnabled(context) || isPocketGestureEnabled(context);
-    }
-
-    protected static void enablePocket(Context context, boolean enable) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit()
-                .putBoolean(GESTURE_POCKET_KEY, enable).apply();
-    }
-
-    protected static boolean isPocketEnabled(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(GESTURE_POCKET_KEY, false);
+    public static boolean areGesturesEnabled(Context context) {
+        return isPickUpEnabled(context) || isPocketEnabled(context);
     }
 
     protected static Sensor getSensor(SensorManager sm, String type) {
