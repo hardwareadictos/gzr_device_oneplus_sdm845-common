@@ -46,7 +46,7 @@ public class PickupSensor implements SensorEventListener {
     public PickupSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = Utils.getSensor(mSensorManager, "xiaomi.sensor.pickup");
+        mSensor = Utils.getSensor(mSensorManager, "oneplus.sensor.pickup");
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
