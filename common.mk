@@ -144,6 +144,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# Screen Off Gestures
+PRODUCT_PACKAGES += \
+    ScreenOffGestures
+
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/ScreenOffGestures/overlay
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
