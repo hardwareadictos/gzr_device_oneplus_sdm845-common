@@ -5,8 +5,8 @@ product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
 # Bluetooth (aptX)
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 
 # DASH
 -sbin/dashd;rootfs
@@ -37,7 +37,7 @@ product/lib64/libdpmtcm.so
 
 # IMS
 lib64/libdiag_system.so
--product/priv-app/ims/ims.apk|7bee568d2610ad01515210d08523cb3490b33c78
+-product/priv-app/ims/ims.apk|4161acfa23df5ed8c095754e325f48d0f6968c6e
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
 product/lib64/lib-imsvideocodec.so
@@ -56,7 +56,7 @@ lib64/libmmosal.so
 -vendor/lib64/libplatformconfig.so
 
 # NFC
--app/NxpNfcNci/NxpNfcNci.apk|2e30a9e41c37a6810a05ec9bef8b17e7e86b159b
+-app/NxpNfcNci/NxpNfcNci.apk|683f26e17a1e3547a821925e8a212720cb4992f6
 -app/NxpSecureElement/NxpSecureElement.apk
 etc/nfcee_access.xml|6621fa1927720008fc0bdf47d259b18c871c2c79
 etc/permissions/com.nxp.nfc.xml
@@ -75,7 +75,6 @@ product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
-# product/framework/qti-telephony-common.jar|9e36f9ecff53622ee0fe66f8d65ff05de77546bf
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
@@ -83,7 +82,8 @@ product/framework/QtiTelephonyServicelibrary.jar
 bin/wfdservice
 etc/init/wfdservice.rc
 etc/wfdconfigsink.xml
--framework/WfdCommon.jar|02223348741e43c756e9d2a84b80575711421f2e
+framework/arm64/boot-WfdCommon.oat
+-framework/WfdCommon.jar
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
