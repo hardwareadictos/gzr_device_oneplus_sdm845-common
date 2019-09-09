@@ -80,6 +80,7 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
+    libqdMetaData \
     libqdMetaData.system \
     libvulkan \
     vendor.display.config@1.0
@@ -109,6 +110,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0:64 \
     android.hardware.nfc@1.1:64 \
+    android.hardware.nfc@1.2:64 \
     android.hardware.secure_element@1.0:64 \
     com.android.nfc_extras \
     Tag \
