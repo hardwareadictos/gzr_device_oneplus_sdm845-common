@@ -115,10 +115,10 @@ PRODUCT_PACKAGES += \
     power.qcom:64
 
 # Telephony
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # tri-state-key
@@ -147,10 +147,10 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # WiFi Display
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libnl
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_COPY_FILES += \
