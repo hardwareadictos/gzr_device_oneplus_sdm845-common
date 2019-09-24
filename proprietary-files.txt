@@ -71,11 +71,8 @@ lib64/librcc.so
 lib64/vendor.qti.imsrtpservice@1.0.so
 
 # Media
-lib64/libmmosal.so
 lib/extractors/libmmparser.so
 lib/libFileMux.so
-lib/libmmosal.so
-lib/libmmparser_lite.so
 lib/libOmxMux.so
 
 # NFC
@@ -111,7 +108,6 @@ etc/wfdconfigsink.xml
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
-lib/libwfdaac.so
 lib/libwfdavenhancements.so
 lib/libwfdclient.so
 lib/libwfdcodecv4l2.so
