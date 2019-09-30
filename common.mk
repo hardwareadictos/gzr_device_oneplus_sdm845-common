@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0
 
 # Doze
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     OnePlusDoze
 
 # HotwordEnrollement app permissions
