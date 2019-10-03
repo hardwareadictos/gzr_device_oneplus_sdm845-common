@@ -135,6 +135,3 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sdm845-common/BoardConfigVendor.mk
-
-# TEMP Bringup
-ALLOW_MISSING_DEPENDENCIES=true
