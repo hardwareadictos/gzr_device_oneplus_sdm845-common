@@ -145,7 +145,7 @@ PRODUCT_PACKAGES += \
     RemovePackages
 
 # Screen Off Gestures
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ScreenOffGestures
 
 DEVICE_PACKAGE_OVERLAYS += \
